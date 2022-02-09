@@ -1,0 +1,119 @@
+.Containerr{
+    padding: 38px 60px 15px 115px;
+}
+
+/* INPUT DESIGN */
+.span{
+    position: relative;
+}
+.gate {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #377d6a;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 65px;
+    transition: all 0.3s ease-in-out;
+    font-size: 23px;
+
+}
+.gate::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+    font-size: 25px;
+}
+.gate + label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, .4);
+    background: #7ab893;
+    transition: all 0.4s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform-origin: left bottom;
+    z-index: 99;
+}
+.gate + label:before, .gate + label:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    background: #377d6a;
+    transform-origin: left bottom;
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+}
+.gate + label:before {
+    background: rgba(3, 36, 41, .2);
+    z-index: -2;
+    right: 20%;
+}
+span:nth-child(2) .gate {
+    text-indent: 85px;
+}
+span:nth-child(2) .gate:focus, span:nth-child(2) .gate:active {
+    text-indent: 0;
+}
+.gate:focus, .gate:active {
+    color: #377d6a;
+    text-indent: 0;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.gate:focus::-webkit-input-placeholder, .gate:active::-webkit-input-placeholder {
+    color: #aaa;
+}
+.gate:focus + label, .gate:active + label {
+    transform: rotate(-66deg);
+    border-radius: 3px;
+}
+.gate:focus + label:before, .gate:active + label:before {
+    transform: rotate(10deg);
+}
+#class{
+    padding: 0px 69px 19px;
+}
+
+/* BUTTON DESIGN */
+button{
+    padding: 6px 69px 21px;
+    background-color: transparent;
+    border: 1px solid rgba(185, 184, 184, 0.616);
+}
+.listWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+}
+.listItem{
+    display: flex;
+    align-items: center;
+    width: 45%; 
+    background-color: rgba(112, 112, 112, 0.103);
+    padding: 4px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+    justify-content: space-between;
+}
+.true{
+    color: green;
+}
+.false{
+    color: red;
+}
